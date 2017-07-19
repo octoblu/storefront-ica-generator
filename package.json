@@ -1,7 +1,7 @@
 {
   "name": "storefront-ica-generator",
-  "version": "1.0.0",
-  "description": "Meshblu Connector StoreFront ICA",
+  "version": "1.0.1",
+  "description": "StoreFront ICA Generator",
   "homepage": "https://github.com/octoblu/storefront-ica-generator",
   "bugs": "https://github.com/octoblu/storefront-ica-generator/issues",
   "author": {
@@ -36,7 +36,6 @@
   "dependencies": {
     "async": "^2.5.0",
     "debug": "^2.6.8",
-    "fs-extra": "^4.0.0",
     "lodash": "^4.17.4",
     "request": "^2.81.0"
   },

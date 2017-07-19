@@ -7,6 +7,52 @@
 
 [![NPM](https://nodei.co/npm/storefront-ica-generator.svg?style=flat)](https://npmjs.org/package/storefront-ica-generator)
 
+## Usage
+
+
+```javascript
+const StoreFrontICAGenerator = require('storefront-ica-generator')
+
+new StoreFrontICAGenerator({
+  username: <username>,
+  password: <password>,
+  domain: <domain>,
+  storeFrontUrl: <storeFrontUrl>,
+  desktop: <desktopName>,
+}).generateICA((error, contents) => {
+  if (error) {
+    console.error('Generate ICA Error', error)
+    process.exit(1)
+    return
+  }
+  console.log('done', contents)
+  process.exit(0)
+})
+```
+
+```javascript
+const StoreFrontICAGenerator = require('storefront-ica-generator')
+const icaFilePath = <icaFilePath>
+
+new StoreFrontICAGenerator({
+  username: <username>,
+  password: <password>,
+  domain: <domain>,
+  storeFrontUrl: <storeFrontUrl>,
+  desktop: <desktopName>,
+  icaFilePath: icaFilePath,
+}).generateICAFile((error) => {
+  if (error) {
+    console.error('Generate ICA Error', error)
+    process.exit(1)
+    return
+  }
+  console.log('wrote file', icaFilePath)
+  process.exit(0)
+})
+```
+
+
 ## License
 
 The MIT License (MIT)
