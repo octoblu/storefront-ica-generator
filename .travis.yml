@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- '8'
+after_success:
+- npm run coverage
+- npm run mocha:json
+- bash <(curl -s https://codecov.io/bash)
+- bash <(curl -s https://codecov.octoblu.com/bash)
+branches:
+  only:
+  - "/^v[0-9]/"
+deploy:
+  provider: npm
+  email: serveradmin@octoblu.com
+  api_key:
+    secure: d01TBhR0KMWB6nLKEFf7mDplOPJRHH9CFu5tUTRcgpO71G2HX0B17r3u4PGpDEz2EP0w0IM9IWarze6wU5+R/l6Ne1GRrUY+mPXE6t7Xi3DFI+UB6taiSdKuyekhCHg/pCDN4dCWin3PskEsV9pRyW6z5BZzQ3pdwMZxKIu0BmHAPvnFu9TEbxV6TF4l9Q6Hgm2UvZHIvYAvMWZ7N7HSgRDfLuAu5dbru6mxPIzjMKaFAaFXCuvm0ABiYZnQSlI67wyqHLlYFSp8Kl5o7rCYL/xpAKGje7VoQ/cDXz+qQqpF31I7Sf24m7NcsfKU8/Wzw0dxGOADY6aP3XN3Ob3KVPM0hHQMyH9S9j3yuUVP9tzvqFxXeA9CyInkJcuywJJVievh0z394fiaUikuNLDRSQ/jkPVLcmkh+mOQfp7bCFp6Lib1YUaV5ZWMxGu0U7vO2I5KOvgTQyVXwzEqPG879Kmr/jBCrWLQQYLGNZDu77+4iMPkjKdJBFyJdZgPFNIuvQBB1TMyauvvyrf9BQEJkGiQVxwRyAcxP1RWXqBGYlJwaLMQMCKh5T+dMFoeMnCCRHgoj+kkGPUnjrKgTZBqEtcLvod2iXlywamE4YiOyTKm1VPXBo1O7pT6Nuvshbb3+MiZlWbuYyV0JR7Ei81KLBCRqqEJuS/QHZ9rQWkeLl4=
+  on:
+    tags: true
+    repo: octoblu/storefront-ica-generator

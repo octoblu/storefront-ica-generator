@@ -1,0 +1,55 @@
+{
+  "name": "storefront-ica-generator",
+  "version": "1.0.0",
+  "description": "Meshblu Connector StoreFront ICA",
+  "homepage": "https://github.com/octoblu/storefront-ica-generator",
+  "bugs": "https://github.com/octoblu/storefront-ica-generator/issues",
+  "author": {
+    "name": "Octoblu",
+    "url": "https://github.com/octoblu"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/octoblu/storefront-ica-generator.git"
+  },
+  "scripts": {
+    "test": "mocha",
+    "coverage": "nyc npm test",
+    "mocha:json": "env NPM_ENV=test mocha --reporter json > coverage/mocha.json",
+    "test:watch": "mocha -w -R mocha-multi --reporter-options spec=-,mocha-osx-reporter=-"
+  },
+  "bin": "command.js",
+  "devDependencies": {
+    "@octoblu/shmock": "^0.9.1",
+    "chai": "^4.0.2",
+    "eslint": "^4.2.0",
+    "mocha": "^3.4.2",
+    "mocha-multi": "^0.11.0",
+    "mocha-osx-reporter": "^0.1.2",
+    "nyc": "^11.0.2",
+    "prettier": "^1.5.3",
+    "server-destroy": "^1.0.1",
+    "sinon": "^2.3.5",
+    "sinon-chai": "^2.11.0"
+  },
+  "dependencies": {
+    "async": "^2.5.0",
+    "debug": "^2.6.8",
+    "fs-extra": "^4.0.0",
+    "lodash": "^4.17.4",
+    "request": "^2.81.0"
+  },
+  "license": "MIT",
+  "nyc": {
+    "cache": true,
+    "reporter": [
+      "text-summary",
+      "lcov",
+      "json"
+    ],
+    "extension": [
+      ".coffee"
+    ]
+  }
+}
