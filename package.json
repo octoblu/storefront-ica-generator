@@ -1,6 +1,6 @@
 {
   "name": "storefront-ica-generator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "StoreFront ICA Generator",
   "homepage": "https://github.com/octoblu/storefront-ica-generator",
   "bugs": "https://github.com/octoblu/storefront-ica-generator/issues",
@@ -36,6 +36,7 @@
   "dependencies": {
     "async": "^2.5.0",
     "debug": "^2.6.8",
+    "fs-extra": "^4.0.0",
     "lodash": "^4.17.4",
     "request": "^2.81.0"
   },
