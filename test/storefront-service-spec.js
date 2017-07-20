@@ -20,7 +20,10 @@ describe('StoreFrontService', function() {
       domain: 'some-domain',
       username: 'some-username',
       password: 'some-password',
-      desktop: 'some-desktop-name',
+      query: {
+        name: 'some-desktop-name',
+        type: 'Citrix.MPS.Desktop',
+      }
     })
   })
 

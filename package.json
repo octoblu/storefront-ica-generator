@@ -1,6 +1,6 @@
 {
   "name": "storefront-ica-generator",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "description": "StoreFront ICA Generator",
   "homepage": "https://github.com/octoblu/storefront-ica-generator",
   "bugs": "https://github.com/octoblu/storefront-ica-generator/issues",
@@ -38,7 +38,9 @@
     "debug": "^2.6.8",
     "fs-extra": "^4.0.0",
     "lodash": "^4.17.4",
-    "request": "^2.81.0"
+    "opn": "^5.1.0",
+    "request": "^2.81.0",
+    "tmp": "^0.0.31"
   },
   "license": "MIT",
   "nyc": {

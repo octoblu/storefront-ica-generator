@@ -9,7 +9,6 @@
 
 ## Usage
 
-
 ```javascript
 const StoreFrontICAGenerator = require('storefront-ica-generator')
 
@@ -18,36 +17,16 @@ new StoreFrontICAGenerator({
   password: <password>,
   domain: <domain>,
   storeFrontUrl: <storeFrontUrl>,
-  desktop: <desktopName>,
-}).generateICA((error, contents) => {
+  query: {
+    name: <resourceName>,
+    type: 'Citrix.MPS.Desktop'
+  },
+}).generateAndLaunch((error) => {
   if (error) {
     console.error('Generate ICA Error', error)
     process.exit(1)
     return
   }
-  console.log('done', contents)
-  process.exit(0)
-})
-```
-
-```javascript
-const StoreFrontICAGenerator = require('storefront-ica-generator')
-const icaFilePath = <icaFilePath>
-
-new StoreFrontICAGenerator({
-  username: <username>,
-  password: <password>,
-  domain: <domain>,
-  storeFrontUrl: <storeFrontUrl>,
-  desktop: <desktopName>,
-  icaFilePath: icaFilePath,
-}).generateICAFile((error) => {
-  if (error) {
-    console.error('Generate ICA Error', error)
-    process.exit(1)
-    return
-  }
-  console.log('wrote file', icaFilePath)
   process.exit(0)
 })
 ```
