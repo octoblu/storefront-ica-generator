@@ -2,7 +2,9 @@ const { describe, beforeEach, afterEach } = global
 const { expect, it } = global
 const shmock = require("@octoblu/shmock")
 const enableDestroy = require("server-destroy")
+const path = require("path")
 const url = require("url")
+const fs = require("fs-extra")
 const StoreFrontService = require('../')
 
 describe('StoreFrontService', function() {
@@ -117,7 +119,7 @@ describe('StoreFrontService', function() {
           CsrfToken: 'some-csrf-token',
           IsUsingHttps: 'Yes',
         })
-        .reply(200, 'some-ica-file-content')
+        .reply(200, fs.readFileSync(path.join(__dirname, 'fixtures', 'example.original.ica'), 'utf-8'))
 
       this.sut.generateICA((error, icaContents) => {
         if (error) {
@@ -129,7 +131,7 @@ describe('StoreFrontService', function() {
     })
 
     it('should yeild ICA contents', function () {
-      expect(this.icaContents).to.deep.equal('some-ica-file-content')
+      expect(this.icaContents).to.deep.equal(fs.readFileSync(path.join(__dirname, 'fixtures', 'example.modified.ica'), 'utf-8'))
     })
 
     it('should call load main page', function () {
