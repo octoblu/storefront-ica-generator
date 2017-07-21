@@ -131,7 +131,8 @@ describe('StoreFrontService', function() {
     })
 
     it('should yeild ICA contents', function () {
-      expect(this.icaContents).to.deep.equal(fs.readFileSync(path.join(__dirname, 'fixtures', 'example.modified.ica'), 'utf-8'))
+      const expected = fs.readFileSync(path.join(__dirname, 'fixtures', 'example.modified.ica'), 'utf-8')
+      expect(this.icaContents).to.deep.equal(expected.trim())
     })
 
     it('should call load main page', function () {

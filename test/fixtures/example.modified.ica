@@ -2,6 +2,7 @@
 InputEncoding=UTF8
 
 [WFClient]
+TWISeamlessFlag=1
 ProxyFavorIEConnectionSetting=Yes
 ProxyTimeout=30000
 ProxyType=Auto
@@ -49,9 +50,7 @@ Title=Some XenDesktop Name
 TransportDriver=TCP/IP
 TRWD=0
 TWIMode=On
-TWIFullScreenMode=1
 TWIIgnoreWorkArea=1
-TWISeamlessFlag=1
 WebSocketPort=8008
 WinStationDriver=ICA 3.0
 
@@ -74,3 +73,6 @@ DriverNameWin32=pdc40n.dll
 [EncRC5-56]
 DriverNameWin16=pdc56w.dll
 DriverNameWin32=pdc56n.dll
+
+[Thinwire 3.0]
+TWIFullScreenMode=1
