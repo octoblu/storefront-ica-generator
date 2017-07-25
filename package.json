@@ -1,6 +1,6 @@
 {
   "name": "storefront-ica-generator",
-  "version": "2.1.1",
+  "version": "2.2.0",
   "description": "StoreFront ICA Generator",
   "homepage": "https://github.com/octoblu/storefront-ica-generator",
   "bugs": "https://github.com/octoblu/storefront-ica-generator/issues",
@@ -24,6 +24,7 @@
     "@octoblu/shmock": "^0.9.1",
     "chai": "^4.0.2",
     "eslint": "^4.3.0",
+    "eslint-config-prettier": "^2.3.0",
     "mocha": "^3.4.2",
     "mocha-multi": "^0.11.0",
     "mocha-osx-reporter": "^0.1.2",
