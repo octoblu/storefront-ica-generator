@@ -2,7 +2,7 @@
 InputEncoding=UTF8
 
 [WFClient]
-TWISeamlessFlag=1
+TWISeamlessFlag=0
 ProxyFavorIEConnectionSetting=Yes
 ProxyTimeout=30000
 ProxyType=Auto
