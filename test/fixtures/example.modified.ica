@@ -2,7 +2,6 @@
 InputEncoding=UTF8
 
 [WFClient]
-TWISeamlessFlag=0
 ProxyFavorIEConnectionSetting=Yes
 ProxyTimeout=30000
 ProxyType=Auto
@@ -49,8 +48,7 @@ startSCD=1584005044086
 Title=Some XenDesktop Name
 TransportDriver=TCP/IP
 TRWD=0
-TWIMode=On
-TWIIgnoreWorkArea=1
+TWIMode=Off
 WebSocketPort=8008
 WinStationDriver=ICA 3.0
 
