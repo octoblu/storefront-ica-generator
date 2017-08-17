@@ -1,6 +1,6 @@
 {
   "name": "storefront-ica-generator",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "StoreFront ICA Generator",
   "homepage": "https://github.com/octoblu/storefront-ica-generator",
   "bugs": "https://github.com/octoblu/storefront-ica-generator/issues",
@@ -23,8 +23,11 @@
   "devDependencies": {
     "@octoblu/shmock": "^0.9.1",
     "chai": "^4.0.2",
-    "eslint": "^4.3.0",
+    "eslint": "^4.4.1",
+    "eslint-config-airbnb-base": "^11.3.1",
     "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-lodash-fp": "^2.1.3",
     "mocha": "^3.4.2",
     "mocha-multi": "^0.11.0",
     "mocha-osx-reporter": "^0.1.2",
